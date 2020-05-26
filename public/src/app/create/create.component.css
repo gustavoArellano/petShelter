@@ -1,0 +1,16 @@
+form {
+    margin-left: 50px;
+}
+
+/* .addbutton {
+    margin-top: 400px;
+} */
+.cancelbutton {
+    margin-left: 150px; 
+    margin-top: -33px;
+ 
+}
+
+.text-danger {
+    color: red;
+}

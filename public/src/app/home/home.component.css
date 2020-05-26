@@ -1,0 +1,35 @@
+h3 {
+    display: inline-block;
+}
+
+table {
+    width: 850px; 
+    margin-top: 50px;
+    border: 2px, soldi, black;
+}
+
+.htable {
+    background-color:lightslategray; 
+    color: white;
+}
+
+.addbutton {
+    display: block;
+    color: blue;
+}
+
+.detailsbutton {
+    display: inline-block;
+    color: white;
+    background-color :#617A88;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.editbutton {
+    display: inline-block;
+    color: white;
+    background-color: #E3CFBD;
+    margin-left: 10px;
+    font-size: 15px;
+
+}

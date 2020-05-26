@@ -1,0 +1,47 @@
+<h3>Know of a pet needing a home?</h3>
+<div>
+  <form (submit)="createPet()">
+    <span class="text-danger" *ngIf="errors.name">{{ errors.name.message }}</span>
+    <br>
+    <span class="text-danger" *ngIf="errors.type">{{ errors.type.message }}</span>
+    <br>
+    <span class="text-danger" *ngIf="errors.description">{{ errors.description.message }}</span>
+
+
+    <p>Pet Name: </p> 
+    <input type="text" name="name" required minlength="3" #name="ngModel" [(ngModel)]="newPet.name" placeholder="Pet Name">
+    
+    <div *ngIf="!name.valid && (name.dirty || name.touched)">
+      <span class="text-danger" *ngIf="name.errors.required">Pet name required!(FrontEnd)</span>
+      <span class="text-danger" *ngIf="name.errors.minlength">Must be at least 3 characters!(FrontEnd)</span>
+    </div>
+
+    <p> Pet Type: </p> 
+    <input type="text" name="type" required min="3" #type="ngModel" [(ngModel)]="newPet.type" placeholder="Type">
+    <div *ngIf="!type.valid && (type.dirty || type.touched)">
+      <span class="text-danger" *ngIf="type.errors.required">Pet type is required!(FrontEnd)</span>
+      <span class="text-danger" *ngIf="type.errors.min">PMust be at least 3 characters!(FrontEnd)</span>
+    </div>
+
+    <p>Description: </p> 
+    <input type="text" name="description" required min="3" #description="ngModel" [(ngModel)]="newPet.description" placeholder="Description">
+    <div *ngIf="!description.valid && (description.dirty || description.touched)">
+      <span class="text-danger" *ngIf="description.errors.required">Pet description is required!(FontEnd)</span>
+      <span class="text-danger" *ngIf="description.errors.min">Must be at least 3 characters!(FrontEnd)</span>
+    </div> 
+    <br><br>
+    <p>Skills:</p>
+    <p class="skill">Skill 1: <input type="text" name="skill1" [(ngModel)]="newPet.skill1" placeholder="Skill"></p> 
+    <p class="skill">Skill 2: <input type="text" name="skill2" [(ngModel)]="newPet.skill2" placeholder="Skill"></p> 
+    <p class="skill">SKill 3: <input type="text" name="skill3" [(ngModel)]="newPet.skill3" placeholder="Skill"></p> 
+
+    <br>
+    <button class="addbutton" type="submit" class="btn btn-info">ADD PET</button>
+  </form>
+
+  <div class="cancelbutton">
+    <button (click)="goHome()" type="button" class="btn btn-info">CANCEL</button>
+  </div>
+</div>
+
+

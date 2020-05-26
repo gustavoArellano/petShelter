@@ -1,0 +1,28 @@
+
+
+<h3 class="header">Details about {{ pet.name }} <button (click)="goHome()" type="button" class="btn btn-info">HOME</button>
+</h3>
+
+<div class="info" id="myTable">
+  <h3>Pet type: </h3> <p>{{ pet.type }}</p>
+  <h3>Description:</h3> <p>{{ pet.description }}</p>
+  <h3>Skills: </h3> <p>{{ pet.skill1 }}</p>
+  <p>{{ pet.skill2 }}</p>
+  <p>{{ pet.skill3}}</p>
+  <h3>Likes: </h3> <p>{{ pet.likes}}</p>
+</div>
+
+
+
+
+
+
+<div class="buttons">
+  <!-- <form (submit)="addLike(pet.likes)">
+    <input type="hidden" name="petLike.likes" [ngModel]="petLike.likes">
+    <button class="addbutton" type="submit" class="btn btn-info">LIKE THIS PET</button>
+  </form> -->
+  <!-- <button (click)="addLike(pet._id)" [disabled]="isDisabled" class="btn btn-info">LIKE THIS PET</button> -->
+  <button (click)="deletePet(pet._id)" class="btn btn-info">ADOPT THIS PET!</button>
+</div>
+
